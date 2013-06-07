@@ -654,3 +654,42 @@ Spectrum BSDF::rho(const Vector &wo, RNG &rng, BxDFType flags,
 }
 
 
+/*
+ *  mgao12
+ */
+Spectrum InterferBw::f(const Vector &wo, const Vector &wi) const {
+    // TODO: add zero-order maximum
+
+    // Compute optical path difference
+    float delta = fabs (D * (Dot (wo, norm) - Dot (wi, norm)));
+
+    float lbdSamples[5];
+    float vSamples[5];
+    lbdSamples[0] = sampledLambdaStart;
+    lbdSamples[4] = sampledLambdaEnd;
+    vSamples[0] = 0.f;
+    vSamples[1] = 0.f;
+    vSamples[2] = 1.f;  // TODO
+    vSamples[3] = 0.f;
+    vSamples[4] = 0.f;
+
+    SampledSpectrum sSpec;
+    float lambda = delta;
+    int level = 1;
+    while (lambda > sampledLambdaStart) {
+        if (lambda < sampledLambdaEnd) {
+            lbdSamples[1] = lambda - 25;
+            lbdSamples[2] = lambda;
+            lbdSamples[3] = lambda + 25;
+            SampledSpectrum spec = SampledSpectrum::FromSampled (lbdSamples, vSamples, 5);
+            sSpec += spec;
+        }
+        level++;
+        lambda /= level;
+    }
+
+    // TODO: normalized
+    // Convert to RGBSpectrum
+    return sSpec.ToRGBSpectrum ();
+}
+

@@ -537,5 +537,25 @@ inline int BSDF::NumComponents(BxDFType flags) const {
 }
 
 
+/*
+ *  mgao12
+ */
+class InterferBw : public BxDF {
+public:
+    // InterferBw Public Methods
+    InterferBw (const Spectrum &r, const float d, const float deg)
+        : BxDF (BxDFType (BSDF_REFLECTION | BSDF_DIFFUSE)),
+        // TODO: what is BxDFType used for and what should it be?
+          R (r), D (d),
+          norm (Vector (-sinf (deg*M_PI/180), cosf (deg*M_PI/180), 0.f)) {
+    }
+    Spectrum f(const Vector &, const Vector &) const;
+private:
+    // Interfer Private Data
+    Spectrum R;
+    float D;    // unit: nm (same as lambda)
+    Vector norm;
+};
+
 
 #endif // PBRT_CORE_REFLECTION_H
