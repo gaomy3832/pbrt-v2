@@ -540,21 +540,22 @@ inline int BSDF::NumComponents(BxDFType flags) const {
 /*
  *  mgao12
  */
-class InterferBw : public BxDF {
+class Strap : public BxDF {
 public:
-    // InterferBw Public Methods
-    InterferBw (const Spectrum &r, const float d, const float deg)
+    // Strap Public Methods
+    Strap (const Spectrum &r, const float d, const float deg, const float h)
         : BxDF (BxDFType (BSDF_REFLECTION | BSDF_DIFFUSE)),
         // TODO: what is BxDFType used for and what should it be?
-          R (r), D (d),
+          R (r), D (d), H(h), 
           norm (Vector (-sinf (deg*M_PI/180), cosf (deg*M_PI/180), 0.f)) {
     }
     Spectrum f(const Vector &, const Vector &) const;
 private:
-    // Interfer Private Data
+    // Strap Private Data
     Spectrum R;
     float D;    // unit: nm (same as lambda)
     Vector norm;
+    float H;
 };
 
 
