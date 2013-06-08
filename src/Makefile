@@ -201,5 +201,15 @@ endif
 
 $(RENDERER_BINARY): $(RENDERER_OBJS) $(CORE_LIB)
 
+
+%.exr : ../scenes/%.pbrt bin/pbrt
+	bin/pbrt $(PBRT_RUN) --outfile $@ $< 
+
+
+%.tiff : %.exr bin/exrtotiff
+	bin/exrtotiff  $< $@ 
+
 clean:
 	rm -f objs/* bin/* core/pbrtlex.[ch]* core/pbrtparse.[ch]*
+
+run: disk.tiff
