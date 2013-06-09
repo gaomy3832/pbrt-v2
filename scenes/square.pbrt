@@ -1,5 +1,5 @@
 
-Film "image" "string filename" ["disk.exr"]  "integer xresolution" [400] "integer yresolution" [400]
+Film "image" "string filename" ["square.exr"]  "integer xresolution" [400] "integer yresolution" [400]
 
 Sampler "lowdiscrepancy" "integer pixelsamples" [64]
 Accelerator "kdtree"
@@ -66,7 +66,11 @@ AttributeBegin
 Material "ic" "color Kd" [.0 .0 .0] "color R" [.5 .5 .5] "float d" [6000] "float h" [1000] "float deg" [120]
 Translate 10 5 -25
 Rotate 80 1 0 0
-Shape "disk" "float radius" [6] 
+#Shape "disk" "float radius" [6] 
+Shape "trianglemesh"     
+    "point P" [-6 -6 0  6 -6 0   6 6 0   -6 6 0 ]
+    "float uv" [0 0   1 0   1 1   0 1]
+    "integer indices" [ 0 2 1 0 3 2 ]
 
 AttributeEnd
 

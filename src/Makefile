@@ -28,6 +28,10 @@ OPT=-O2
 # comment out this line to enable assertions at runtime
 DEFS += -DNDEBUG
 
+
+# pbrt run options
+PBRT_RUN= --ncores 8
+
 #########################################################################
 # nothing below this line should need to be changed (usually)
 #########################################################################
@@ -212,4 +216,4 @@ $(RENDERER_BINARY): $(RENDERER_OBJS) $(CORE_LIB)
 clean:
 	rm -f objs/* bin/* core/pbrtlex.[ch]* core/pbrtparse.[ch]*
 
-run: disk.tiff
+run: square.tiff

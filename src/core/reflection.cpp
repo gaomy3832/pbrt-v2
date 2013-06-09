@@ -682,9 +682,8 @@ AddPeakInSpectrum (SampledSpectrum & spec, float lambda, float amp) {
 
 
 
-
 Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
-    printf("Debug: call Strap::f method.\n");
+    //printf("Debug: call Strap::f method.\n");
     // TODO: add zero-order maximum
 
     float delta;
@@ -724,7 +723,7 @@ Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
     specIW = SampledSpectrum::FromSampled (lbdSamples, vSamples, nSpectralSamples);
 
     // TODO: normalized
-    SampledSpectrum spec = specIW + specIB;
+    SampledSpectrum spec = specIW * specIB;
 
     // Convert to RGBSpectrum
     return R * spec.ToRGBSpectrum ();

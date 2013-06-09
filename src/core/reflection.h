@@ -551,7 +551,7 @@ public:
           H (h), N (n) {
     }
     Spectrum f(const Vector &, const Vector &) const;
-private:
+//private:
     // Strap Private Data
     Spectrum R;
     float D;    // unit: nm (same as lambda)

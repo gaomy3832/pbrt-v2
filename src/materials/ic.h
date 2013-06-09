@@ -20,7 +20,6 @@ IcMaterial(Reference<Texture<Spectrum> > kd,
 	   Reference<Texture<float> > h
     )
     : Kd(kd), R(r), D(d), H(h), Deg(deg) {
-	printf("Debug: construct IC material.\n");
     }
     BSDF *GetBSDF(const DifferentialGeometry &dgGeom,
                   const DifferentialGeometry &dgShading,

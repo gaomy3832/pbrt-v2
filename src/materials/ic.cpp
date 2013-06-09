@@ -53,8 +53,12 @@ BSDF *IcMaterial::GetBSDF(const DifferentialGeometry &dgGeom,
     }
     Spectrum r = R->Evaluate(dgs).Clamp();
     if (!r.IsBlack()) {
-        BxDF *strap = BSDF_ALLOC(arena, Strap)
-                       (r, D, Deg, H);
+	//printf("Debug: in IcMaterial: %f, %f, %f.\n", (float)D, (float)Deg, (float)H);
+        float d = D->Evaluate(dgs);
+        float deg = Deg->Evaluate(dgs);
+        float h = H->Evaluate(dgs);
+        BxDF *strap = BSDF_ALLOC(arena, Strap)(r, d, deg, h);
+	//printf("Debug: in Strap: %f, %f, %f.\n", ((Strap *)strap)->D, ((Strap *)strap)->N, ((Strap *)strap)->H);
         bsdf->Add(strap);
     }
     return bsdf;
@@ -65,9 +69,9 @@ IcMaterial *CreateIcMaterial(const Transform &xform,
         const TextureParams &mp) {
     Reference<Texture<Spectrum> > Kd = mp.GetSpectrumTexture("Kd", Spectrum(0.25f));
     Reference<Texture<Spectrum> > R = mp.GetSpectrumTexture("R", Spectrum(0.25f));
-    Reference<Texture<float> > D = mp.GetFloatTexture("d", 1000.f);
-    Reference<Texture<float> > Deg = mp.GetFloatTexture("deg", 0.f);
-    Reference<Texture<float> > H = mp.GetFloatTexture("h", 1000.f);
+    Reference<Texture<float> > D = mp.GetFloatTexture("d", 1000.0f);
+    Reference<Texture<float> > Deg = mp.GetFloatTexture("deg", 0.0f);
+    Reference<Texture<float> > H = mp.GetFloatTexture("h", 1000.0f);
     return new IcMaterial(Kd, R, D, Deg, H);
 }
 
