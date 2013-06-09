@@ -216,4 +216,10 @@ $(RENDERER_BINARY): $(RENDERER_OBJS) $(CORE_LIB)
 clean:
 	rm -f objs/* bin/* core/pbrtlex.[ch]* core/pbrtparse.[ch]*
 
+refresh:
+	touch ../scenes/*.pbrt
+
 run: square.tiff
+
+chip: refresh chip.tiff
+	gimp chip.tiff
