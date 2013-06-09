@@ -34,9 +34,11 @@ WorldBegin
 #
 
 AttributeBegin
-AreaLightSource "area" "color L" [600 600 600] "integer nsamples" [1]
-Translate 30 40 -60
-Shape "disk" "float radius" [2] 
+#AreaLightSource "area" "color L" [600 600 600] "integer nsamples" [1]
+#Translate 30 40 -60
+#Shape "disk" "float radius" [2]
+
+LightSource "distant" "point from" [0 0 0] "point to" [1.2 -1 0] "color L" [10 10 10]
 AttributeEnd
 
 
@@ -63,7 +65,7 @@ AttributeEnd
 
 
 AttributeBegin
-Material "ic" "color Kd" [.0 .0 .0] "color R" [.5 .5 .5] "float d" [6000] "float h" [1000] "float deg" [120]
+Material "ic" "color Kd" [.0 .0 .0] "color R" [.5 .5 .5] "float d" [1000] "float h" [5000] "float deg" [90]
 Translate 10 5 -25
 Rotate 80 1 0 0
 #Shape "disk" "float radius" [6] 
