@@ -5,22 +5,20 @@ Sampler "lowdiscrepancy" "integer pixelsamples" [64]
 Accelerator "kdtree"
 
 
-#
-# CS348B Note: Use the following LookAt declarations to render the
-# three versions of the scene for assignment 2
-#
-
-
 # Configuration 1: The entire scene from above
 #LookAt 10 600 -25  0 0 0   -.081 .976 .203
 
 
 # Configuration 2: Medium Range 
-LookAt 19 19 -48   10.5 5 -23   0 1 0
+#LookAt 19 19 -48   10.5 5 -23   0 1 0
 
 
 # Configuration 3: Close Up -- Near a killeroo head
-# LookAt 12 7 -34.5   6 8.5 -24   0 1 0
+#LookAt 12 7 -34.5   6 8.5 -24   0 1 0
+
+
+# Configuration 4: Z direction view 
+LookAt 0 10 0   0 10 1   0 1 0
 
 
 
@@ -30,7 +28,7 @@ Camera "perspective" "float fov" [38]
 WorldBegin
 
 #
-# The scene is lit by a single area light
+# Light sources in the scene
 #
 
 AttributeBegin
@@ -38,7 +36,7 @@ AttributeBegin
 #Translate 30 40 -60
 #Shape "disk" "float radius" [2]
 
-LightSource "distant" "point from" [0 0 0] "point to" [1.2 -1 0] "color L" [10 10 10]
+LightSource "distant" "point from" [0 0 0] "point to" [1.2 -1 1] "color L" [10 10 10]
 AttributeEnd
 
 
@@ -71,55 +69,126 @@ AttributeEnd
 
 AttributeBegin
 Material "ic" "color Kd" [.0 .0 .0] "color R" [.5 .5 .5] "float d" [1000] "float h" [5000] "float deg" [90]
-Translate 10 5 -25
-Rotate 80 1 0 0
-#Shape "disk" "float radius" [6] 
-#Shape "trianglemesh"     
-#    "point P" [-6 -6 0  6 -6 0   6 6 0   -6 6 0 ]
-#    "float uv" [0 0   1 0   1 1   0 1]
-#    "integer indices" [ 0 2 1 0 3 2 ]
+
+Translate 0 10 20
+Rotate 1 1 0 0
 
 
-# 4x4 die array
-
-Scale 2 2 2
-Translate -2 -2 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
-
-Translate 1 -3 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
-Translate 0 1 0
-Include "die.pbrt"
+AttributeBegin
+Material "matte" "rgb Kd" [0 0 0]
+Shape "disk" "float radius" [6.2]
+AttributeEnd
 
 
-Translate 1 -3 0
+Translate -5.5 0 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
 Include "die.pbrt"
 
+Translate -11 1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
 
-Translate 1 -3 0
+Translate -10 1 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
 Include "die.pbrt"
-Translate 0 1 0
+Translate 1 0 0
 Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -9 1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -8 1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
 
 AttributeEnd
 
