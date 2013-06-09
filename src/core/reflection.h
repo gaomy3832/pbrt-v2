@@ -543,11 +543,12 @@ inline int BSDF::NumComponents(BxDFType flags) const {
 class Strap : public BxDF {
 public:
     // Strap Public Methods
-    Strap (const Spectrum &r, const float d, const float deg, const float h)
+    Strap (const Spectrum &r, const float d, const float deg, const float h, const float n = 1.544)
         : BxDF (BxDFType (BSDF_REFLECTION | BSDF_DIFFUSE)),
         // TODO: what is BxDFType used for and what should it be?
-          R (r), D (d), H(h), 
-          norm (Vector (-sinf (deg*M_PI/180), cosf (deg*M_PI/180), 0.f)) {
+          R (r), D (d),
+          norm (Vector (-sinf (deg*M_PI/180), cosf (deg*M_PI/180), 0.f)),
+          H (h), N (n) {
     }
     Spectrum f(const Vector &, const Vector &) const;
 private:
@@ -556,6 +557,7 @@ private:
     float D;    // unit: nm (same as lambda)
     Vector norm;
     float H;
+    float N;
 };
 
 

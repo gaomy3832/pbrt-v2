@@ -657,39 +657,75 @@ Spectrum BSDF::rho(const Vector &wo, RNG &rng, BxDFType flags,
 /*
  *  mgao12
  */
-Spectrum InterferBw::f(const Vector &wo, const Vector &wi) const {
-    // TODO: add zero-order maximum
+#define PEAKWIDTH 25
 
-    // Compute optical path difference
-    float delta = fabs (D * (Dot (wo, norm) - Dot (wi, norm)));
+static void
+AddPeakInSpectrum (SampledSpectrum & spec, float lambda, float amp) {
+    if (lambda <= sampledLambdaStart || lambda >= sampledLambdaEnd)
+        return;
 
     float lbdSamples[5];
     float vSamples[5];
     lbdSamples[0] = sampledLambdaStart;
+    lbdSamples[1] = lambda - PEAKWIDTH;
+    lbdSamples[2] = lambda;
+    lbdSamples[3] = lambda + PEAKWIDTH;
     lbdSamples[4] = sampledLambdaEnd;
     vSamples[0] = 0.f;
     vSamples[1] = 0.f;
-    vSamples[2] = 1.f;  // TODO
+    vSamples[2] = amp;
     vSamples[3] = 0.f;
     vSamples[4] = 0.f;
 
-    SampledSpectrum sSpec;
+    spec += SampledSpectrum::FromSampled (lbdSamples, vSamples, 5);
+}
+
+
+
+
+Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
+    // TODO: add zero-order maximum
+
+    float delta;
+
+    // Interference between units
+    SampledSpectrum specIB (0.f);
+    // Compute optical path difference
+    delta = fabs (D * (Dot (wo, norm) - Dot (wi, norm)));
+    // Add the maximum within visible light range
     float lambda = delta;
     int level = 1;
     while (lambda > sampledLambdaStart) {
         if (lambda < sampledLambdaEnd) {
-            lbdSamples[1] = lambda - 25;
-            lbdSamples[2] = lambda;
-            lbdSamples[3] = lambda + 25;
-            SampledSpectrum spec = SampledSpectrum::FromSampled (lbdSamples, vSamples, 5);
-            sSpec += spec;
+            AddPeakInSpectrum (specIB, lambda, 1.f);  // TODO: change amplitude
         }
         level++;
         lambda /= level;
     }
 
+    // Inteference within unit
+    // The angles inside the surface
+    float sinit = SinTheta (wi) / N;
+    float sinot = SinTheta (wo) / N;
+    float cosit = sqrtf (max (0.f, 1.f - sinit * sinit));
+    float cosot = sqrtf (max (0.f, 1.f - sinot * sinot));
+    // Compute optical path difference
+    delta = N * H * (cosot + (1.f - sinot * sinit) / cosit);
+    SampledSpectrum specIW;
+    float *lbdSamples = new float [nSpectralSamples];
+    float *vSamples = new float [nSpectralSamples];
+    float dSample = (sampledLambdaEnd - sampledLambdaStart) / nSpectralSamples;
+    for (int i = 0; i < nSpectralSamples; i++) {
+        lbdSamples[i] = sampledLambdaStart + i*dSample;
+        vSamples[i] = cosf (M_PI / lbdSamples[i] * delta);
+        vSamples[i] *= vSamples[i];
+    }
+    specIW = SampledSpectrum::FromSampled (lbdSamples, vSamples, nSpectralSamples);
+
     // TODO: normalized
+    SampledSpectrum spec = specIW + specIB;
+
     // Convert to RGBSpectrum
-    return sSpec.ToRGBSpectrum ();
+    return R * spec.ToRGBSpectrum ();
 }
 
