@@ -684,6 +684,7 @@ AddPeakInSpectrum (SampledSpectrum & spec, float lambda, float amp) {
 
 
 Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
+    printf("Debug: call Strap::f method.\n");
     // TODO: add zero-order maximum
 
     float delta;

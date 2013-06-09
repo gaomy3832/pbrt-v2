@@ -75,6 +75,7 @@
 #include "lights/point.h"
 #include "lights/projection.h"
 #include "lights/spot.h"
+#include "materials/ic.h"
 #include "materials/glass.h"
 #include "materials/kdsubsurface.h"
 #include "materials/matte.h"
@@ -361,7 +362,9 @@ Reference<Material> MakeMaterial(const string &name,
         const Transform &mtl2world,
         const TextureParams &mp) {
     Material *material = NULL;
-    if (name == "matte")
+    if (name == "ic")
+        material = CreateIcMaterial(mtl2world, mp);
+    else if (name == "matte")
         material = CreateMatteMaterial(mtl2world, mp);
     else if (name == "plastic")
         material = CreatePlasticMaterial(mtl2world, mp);
