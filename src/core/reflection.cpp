@@ -663,9 +663,8 @@ Spectrum BSDF::rho(const Vector &wo, RNG &rng, BxDFType flags,
 static float Gaussian (float lambda, void *aux) {
     float center = *((float *)aux);
     float sigma = *((float *)aux + 1);
-    float peak = *((float *)aux + 2);
     float t = (lambda - center) / sigma;
-    return peak * expf (-t*t/2);
+    return expf (-t*t/2);
 }
 
 static float CosSqr (float lambda, void *aux) {
@@ -674,6 +673,16 @@ static float CosSqr (float lambda, void *aux) {
     return t*t;
 }
 
+static float SincSqr (float lambda, void *aux) {
+    float delta = *((float *)aux);
+    float t = M_PI / lambda * delta;
+    if (t < 1e-5)
+        return 1.f;
+    else {
+        t = sinf (t) / t;
+        return t*t;
+    }
+}
 
 
 static SampledSpectrum
@@ -691,8 +700,6 @@ IntensitySample (float (*Intensity)(float, void *), void *aux) {
 
 
 Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
-    //printf("Debug: call Strap::f method.\n");
-    // TODO: add zero-order maximum
 
     float delta;
 
@@ -703,9 +710,8 @@ Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
     SampledSpectrum specIB (0.f);
     float lambda = delta;
     int level = 1;
-    float aux[3];
+    float aux[2];
     aux[1] = PEAKWIDTH;
-    aux[2] = 1.f;  // TODO: change amplitude
     while (lambda > sampledLambdaStart) {
         if (lambda < sampledLambdaEnd) {
             aux[0] = lambda;
@@ -719,18 +725,22 @@ Spectrum Strap::f(const Vector &wo, const Vector &wi) const {
     // The angles inside the surface
     float sinit = SinTheta (wi) / N;
     float sinot = SinTheta (wo) / N;
-    float cosit = sqrtf (max (0.f, 1.f - sinit * sinit));
-    float cosot = sqrtf (max (0.f, 1.f - sinot * sinot));
+    float cosit = sqrtf (1.f - sinit * sinit);
+    float cosot = sqrtf (1.f - sinot * sinot);
     // Compute optical path difference
     delta = N * H * (cosot + (1.f - sinot * sinit) / cosit);
     SampledSpectrum specIW = IntensitySample (&CosSqr, &delta);
+
+    // Diffraction within unit
+    delta = A * (sinot - sinit);
+    SampledSpectrum specDW = IntensitySample (&SincSqr, &delta);
 
     // Anisotropic
     Vector tau(norm.y, -norm.x, 0.f);
     float coef = powf (fabs (Dot (tau, (wo - wi))), BETA);
 
     // TODO: normalized
-    SampledSpectrum spec = coef * specIW * specIB;
+    SampledSpectrum spec = coef * specIW * specIB * specDW;
 
     // Convert to RGBSpectrum
     return R * spec.ToRGBSpectrum ();

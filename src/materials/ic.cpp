@@ -30,7 +30,7 @@
  */
 
 
-// materials/plastic.cpp*
+// materials/ic.cpp*
 #include "stdafx.h"
 #include "materials/ic.h"
 #include "spectrum.h"
@@ -38,27 +38,36 @@
 #include "paramset.h"
 #include "texture.h"
 
-// PlasticMaterial Method Definitions
+// IcMaterial Method Definitions
 BSDF *IcMaterial::GetBSDF(const DifferentialGeometry &dgGeom,
                                const DifferentialGeometry &dgShading,
                                MemoryArena &arena) const {
-    // Allocate _BSDF_, possibly doing bump mapping with _bumpMap_
+    // Allocate _BSDF_
     DifferentialGeometry dgs;
     dgs = dgShading;
     BSDF *bsdf = BSDF_ALLOC(arena, BSDF)(dgs, dgGeom.nn);
+
     Spectrum kd = Kd->Evaluate(dgs).Clamp();
     if (!kd.IsBlack()) {
         BxDF *diff = BSDF_ALLOC(arena, Lambertian)(kd);
         bsdf->Add(diff);
     }
+
+    Spectrum ks = Ks->Evaluate(dgs).Clamp();
+    if (!ks.IsBlack()) {
+        Fresnel *fresnel = BSDF_ALLOC(arena, FresnelDielectric)(1.5f, 1.f);
+        BxDF *spec = BSDF_ALLOC(arena, Microfacet)
+                       (ks, fresnel, BSDF_ALLOC(arena, Blinn)(INFINITY));
+        bsdf->Add(spec);
+    }
+
     Spectrum r = R->Evaluate(dgs).Clamp();
     if (!r.IsBlack()) {
-	//printf("Debug: in IcMaterial: %f, %f, %f.\n", (float)D, (float)Deg, (float)H);
         float d = D->Evaluate(dgs);
+        float a = A->Evaluate(dgs);
         float deg = Deg->Evaluate(dgs);
         float h = H->Evaluate(dgs);
-        BxDF *strap = BSDF_ALLOC(arena, Strap)(r, d, deg, h);
-	//printf("Debug: in Strap: %f, %f, %f.\n", ((Strap *)strap)->D, ((Strap *)strap)->N, ((Strap *)strap)->H);
+        BxDF *strap = BSDF_ALLOC(arena, Strap)(r, d, a, deg, h);
         bsdf->Add(strap);
     }
     return bsdf;
@@ -68,11 +77,13 @@ BSDF *IcMaterial::GetBSDF(const DifferentialGeometry &dgGeom,
 IcMaterial *CreateIcMaterial(const Transform &xform,
         const TextureParams &mp) {
     Reference<Texture<Spectrum> > Kd = mp.GetSpectrumTexture("Kd", Spectrum(0.25f));
+    Reference<Texture<Spectrum> > Ks = mp.GetSpectrumTexture("Ks", Spectrum(0.25f));
     Reference<Texture<Spectrum> > R = mp.GetSpectrumTexture("R", Spectrum(0.25f));
     Reference<Texture<float> > D = mp.GetFloatTexture("d", 1000.0f);
+    Reference<Texture<float> > A = mp.GetFloatTexture("a", 250.0f);
     Reference<Texture<float> > Deg = mp.GetFloatTexture("deg", 0.0f);
     Reference<Texture<float> > H = mp.GetFloatTexture("h", 1000.0f);
-    return new IcMaterial(Kd, R, D, Deg, H);
+    return new IcMaterial(Kd, Ks, R, D, A, Deg, H);
 }
 
 
