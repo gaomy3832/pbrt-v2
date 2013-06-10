@@ -41,7 +41,7 @@ AttributeEnd
 
 
 #
-# The ground plane
+# The background plane
 #
 
 AttributeBegin
@@ -50,8 +50,9 @@ Texture "grid" "color" "imagemap" "string filename" ["lines.exr"] "float uscale"
 Texture "scaled_grid" "color" "scale" "texture tex1" "grid" "color tex2" [ .5 .5 .8 ]
 Material "matte" "texture Kd" "scaled_grid"
 
+Translate 0 0 50
 Scale 100 100 100
-Rotate 90 1 0 0
+#Rotate 90 1 0 0
 Shape "trianglemesh"     
     "point P" [-1 -1 0  1 -1 0   1 1 0   -1 1 0 ]
     "float uv" [0 0   1 0   1 1   0 1]
@@ -73,14 +74,46 @@ Material "ic" "color Kd" [.0 .0 .0] "color R" [.5 .5 .5] "float d" [1000] "float
 Translate 0 10 20
 Rotate 1 1 0 0
 
+# Substrate
 
 AttributeBegin
 Material "matte" "rgb Kd" [0 0 0]
-Shape "disk" "float radius" [6.2]
+Shape "disk" "float radius" [6.7]
 AttributeEnd
 
 
-Translate -5.5 0 0
+# Dies
+
+Translate -6 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -12 1 0
+Include "die.pbrt"
+Translate 1 0 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
@@ -127,10 +160,10 @@ Translate 1 0 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
-Translate 1 0 0
-Include "die.pbrt"
 
 Translate -10 1 0
+Include "die.pbrt"
+Translate 1 0 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
@@ -169,10 +202,31 @@ Translate 1 0 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
+
+Translate -7 1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
 
-Translate -8 1 0
+Translate -4 1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+
+Translate -7 -7 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
@@ -183,6 +237,103 @@ Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
 Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -11 -1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -10 -1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -9 -1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -7 -1 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+Translate 1 0 0
+Include "die.pbrt"
+
+Translate -4 -1 0
 Include "die.pbrt"
 Translate 1 0 0
 Include "die.pbrt"
