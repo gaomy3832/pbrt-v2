@@ -6,7 +6,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.385813942867196 0.385813942867196 0.385813942867196] "float d" [1002.40876929442] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.385813942867196 0.385813942867196 0.385813942867196] "float d" [1002.40876929442] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0 0.00102040816326532 -1e-05  
@@ -16,7 +16,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.429254509917135 0.429254509917135 0.429254509917135] "float d" [998.381958341144] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.429254509917135 0.429254509917135 0.429254509917135] "float d" [998.381958341144] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.482142857142857 0.485204081632653 -2e-05  
@@ -38,7 +38,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.41595349683775 0.41595349683775 0.41595349683775] "float d" [1004.98700122244] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.41595349683775 0.41595349683775 0.41595349683775] "float d" [1004.98700122244] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.48469387755102 0.211224489795918 -3e-05  
@@ -72,7 +72,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.502737532479327 0.502737532479327 0.502737532479327] "float d" [995.100727634475] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.502737532479327 0.502737532479327 0.502737532479327] "float d" [995.100727634475] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.447448979591837 0.368877551020408 -4e-05  
@@ -106,7 +106,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.411765236617339 0.411765236617339 0.411765236617339] "float d" [1000.89735634616] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.411765236617339 0.411765236617339 0.411765236617339] "float d" [1000.89735634616] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.446938775510204 0.179591836734694 -5e-05  
@@ -158,15 +158,15 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.444393793675945 0.444393793675945 0.444393793675945] "float d" [999.174207621416] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.444393793675945 0.444393793675945 0.444393793675945] "float d" [999.174207621416] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.431081324289613 0.431081324289613 0.431081324289613] "float d" [998.752139436847] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.431081324289613 0.431081324289613 0.431081324289613] "float d" [998.752139436847] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.58446393295894 0.58446393295894 0.58446393295894] "float d" [968.92828453133] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.58446393295894 0.58446393295894 0.58446393295894] "float d" [968.92828453133] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.312244897959184 0.450510204081633 -8e-05  
@@ -362,7 +362,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.429155484260639 0.429155484260639 0.429155484260639] "float d" [1002.8993662884] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.429155484260639 0.429155484260639 0.429155484260639] "float d" [1002.8993662884] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.225510204081633 0.470918367346939 -9e-05  
@@ -606,11 +606,11 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.699767413392331 0.699767413392331 0.699767413392331] "float d" [1046.40319671657] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.699767413392331 0.699767413392331 0.699767413392331] "float d" [1046.40319671657] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.570905976482226 0.570905976482226 0.570905976482226] "float d" [1008.81224382409] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.570905976482226 0.570905976482226 0.570905976482226] "float d" [1008.81224382409] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.225510204081633 0.436224489795918 -0.00011  
@@ -806,11 +806,11 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.593569911822905 0.593569911822905 0.593569911822905] "float d" [1035.09564951889] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.593569911822905 0.593569911822905 0.593569911822905] "float d" [1035.09564951889] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.473604151349832 0.473604151349832 0.473604151349832] "float d" [1034.17975678314] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.473604151349832 0.473604151349832 0.473604151349832] "float d" [1034.17975678314] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.261224489795918 0.314285714285714 -0.00013  
@@ -874,11 +874,11 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.550425871795429 0.550425871795429 0.550425871795429] "float d" [1019.58579382409] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.550425871795429 0.550425871795429 0.550425871795429] "float d" [1019.58579382409] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.595871718751852 0.595871718751852 0.595871718751852] "float d" [913.173321277263] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.595871718751852 0.595871718751852 0.595871718751852] "float d" [913.173321277263] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.402551020408163 0.106632653061224 -0.00015  
@@ -894,7 +894,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.541244269902083 0.541244269902083 0.541244269902083] "float d" [921.396511437689] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.541244269902083 0.541244269902083 0.541244269902083] "float d" [921.396511437689] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.471428571428571 0.108673469387755 -0.00016  
@@ -958,11 +958,11 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.509041819313495 0.509041819313495 0.509041819313495] "float d" [926.958953612905] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.509041819313495 0.509041819313495 0.509041819313495] "float d" [926.958953612905] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.365387230728473 0.365387230728473 0.365387230728473] "float d" [956.163621113843] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.365387230728473 0.365387230728473 0.365387230728473] "float d" [956.163621113843] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.444897959183673 -0.260714285714286 -0.00018  
@@ -972,7 +972,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.498561605507388 0.498561605507388 0.498561605507388] "float d" [954.288524991235] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.498561605507388 0.498561605507388 0.498561605507388] "float d" [954.288524991235] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.368367346938775 -0.0464285714285714 -0.00019  
@@ -1108,7 +1108,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.390892436593717 0.390892436593717 0.390892436593717] "float d" [918.509341489422] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.390892436593717 0.390892436593717 0.390892436593717] "float d" [918.509341489422] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.446938775510204 -0.260204081632653 -0.0002  
@@ -1124,7 +1124,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.302807948994405 0.302807948994405 0.302807948994405] "float d" [973.145668243345] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.302807948994405 0.302807948994405 0.302807948994405] "float d" [973.145668243345] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.426530612244898 -0.250510204081633 -0.00021  
@@ -1134,7 +1134,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.538176940879785 0.538176940879785 0.538176940879785] "float d" [924.438427922943] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.538176940879785 0.538176940879785 0.538176940879785] "float d" [924.438427922943] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.362755102040816 -0.130612244897959 -0.00022  
@@ -1228,7 +1228,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.467343713312181 0.467343713312181 0.467343713312181] "float d" [982.192641112725] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.467343713312181 0.467343713312181 0.467343713312181] "float d" [982.192641112725] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.346938775510204 -0.0056122448979592 -0.00023  
@@ -1244,7 +1244,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.650347632905411 0.650347632905411 0.650347632905411] "float d" [970.158507782173] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.650347632905411 0.650347632905411 0.650347632905411] "float d" [970.158507782173] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.39030612244898 -0.0596938775510204 -0.00024  
@@ -1284,7 +1284,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.543400392845126 0.543400392845126 0.543400392845126] "float d" [914.581055211278] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.543400392845126 0.543400392845126 0.543400392845126] "float d" [914.581055211278] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.271938775510204 0.0831632653061224 -0.00025  
@@ -1348,15 +1348,15 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.564277843022549 0.564277843022549 0.564277843022549] "float d" [937.477435721219] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.564277843022549 0.564277843022549 0.564277843022549] "float d" [937.477435721219] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.365624444888698 0.365624444888698 0.365624444888698] "float d" [901.395876967537] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.365624444888698 0.365624444888698 0.365624444888698] "float d" [901.395876967537] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.45692604389852 0.45692604389852 0.45692604389852] "float d" [918.745508188138] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.45692604389852 0.45692604389852 0.45692604389852] "float d" [918.745508188138] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0.436734693877551 0.187755102040816 -0.00028  
@@ -1372,7 +1372,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.387509956562076 0.387509956562076 0.387509956562076] "float d" [944.024277906269] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.387509956562076 0.387509956562076 0.387509956562076] "float d" [944.024277906269] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0.436734693877551 0.335714285714286 -0.00029  
@@ -1406,7 +1406,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.563236922794627 0.563236922794627 0.563236922794627] "float d" [923.396146057415] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.563236922794627 0.563236922794627 0.563236922794627] "float d" [923.396146057415] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0.432142857142857 -0.306122448979592 -0.0003  
@@ -1434,7 +1434,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.621350017327296 0.621350017327296 0.621350017327296] "float d" [918.317037697254] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.621350017327296 0.621350017327296 0.621350017327296] "float d" [918.317037697254] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0.421938775510204 -0.29030612244898 -0.00031  
@@ -1498,7 +1498,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.373892895062201 0.373892895062201 0.373892895062201] "float d" [958.514707138096] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.373892895062201 0.373892895062201 0.373892895062201] "float d" [958.514707138096] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate 0.374489795918367 0.402040816326531 -0.00032  
@@ -1610,19 +1610,19 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.517113935939312 0.517113935939312 0.517113935939312] "float d" [985.591065837821] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.517113935939312 0.517113935939312 0.517113935939312] "float d" [985.591065837821] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.307941026049664 0.307941026049664 0.307941026049664] "float d" [937.863457617949] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.307941026049664 0.307941026049664 0.307941026049664] "float d" [937.863457617949] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.521787872780345 0.521787872780345 0.521787872780345] "float d" [1122.34097567713] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.521787872780345 0.521787872780345 0.521787872780345] "float d" [1122.34097567713] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.657921952149386 0.657921952149386 0.657921952149386] "float d" [1156.11188903342] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.657921952149386 0.657921952149386 0.657921952149386] "float d" [1156.11188903342] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.286224489795918 -0.166326530612245 -0.00036  
@@ -1698,7 +1698,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.394043179723303 0.394043179723303 0.394043179723303] "float d" [1115.91284122945] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.394043179723303 0.394043179723303 0.394043179723303] "float d" [1115.91284122945] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.199489795918367 0.0933673469387755 -0.00037  
@@ -2098,7 +2098,7 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.520839366810733 0.520839366810733 0.520839366810733] "float d" [1286.12620237455] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.520839366810733 0.520839366810733 0.520839366810733] "float d" [1286.12620237455] "float h" [530] "float deg" [90]
 
 AttributeBegin
 Translate -0.271938775510204 0.0459183673469388 -0.00038  
@@ -2216,17 +2216,17 @@ AttributeEnd
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.321510374922951 0.321510374922951 0.321510374922951] "float d" [1111.88064139355] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.321510374922951 0.321510374922951 0.321510374922951] "float d" [1111.88064139355] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.510646589005907 0.510646589005907 0.510646589005907] "float d" [1150.43183214543] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.510646589005907 0.510646589005907 0.510646589005907] "float d" [1150.43183214543] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.518577854249918 0.518577854249918 0.518577854249918] "float d" [1213.86681822625] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.518577854249918 0.518577854249918 0.518577854249918] "float d" [1213.86681822625] "float h" [530] "float deg" [90]
 
 
 # New set of pattern, using new material
-Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.306656284857766 0.306656284857766 0.306656284857766] "float d" [1147.85486509785] "float h" [5000] "float deg" [90]
+Material "ic" "color Kd" [.0 .0 .0] "color Ks" [.3 .3 .3] "color R" [0.306656284857766 0.306656284857766 0.306656284857766] "float d" [1147.85486509785] "float h" [530] "float deg" [90]
 

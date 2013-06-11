@@ -219,7 +219,7 @@ clean:
 refresh:
 	touch ../scenes/*.pbrt
 
-run: square.tiff
+run: chip.tiff
 
 chip: refresh chip.tiff
 	gimp chip.tiff

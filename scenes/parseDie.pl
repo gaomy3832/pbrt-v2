@@ -43,7 +43,7 @@ while (my $line = <IN>) {
 	$d = $dMean - $dRange/2 + rand($dRange);
 	$r = 0.3 + rand(0.4);
 	$out .= "\n# New set of pattern, using new material\n";
-	$out .= "Material \"ic\" \"color Kd\" [.0 .0 .0] \"color Ks\" [.3 .3 .3] \"color R\" [$r $r $r] \"float d\" [$d] \"float h\" [5000] \"float deg\" [90]\n\n";
+	$out .= "Material \"ic\" \"color Kd\" [.0 .0 .0] \"color Ks\" [.3 .3 .3] \"color R\" [$r $r $r] \"float d\" [$d] \"float h\" [530] \"float deg\" [90]\n\n";
     }
 
 }
