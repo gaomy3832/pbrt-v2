@@ -38,8 +38,8 @@ AttributeBegin
 
 #LightSource "distant" "point from" [0 0 0] "point to" [1.2 -1 1] "color L" [10 10 10]
 
-LightSource "point" "point from" [-15 25 6] "rgb I" [10000 10000 10000]
-LightSource "point" "point from" [-10  5 8] "rgb I" [10000 10000 10000]
+LightSource "point" "point from" [15 25 5] "rgb I" [10000 10000 10000]
+#LightSource "point" "point from" [-10  0 8] "rgb I" [10000 10000 10000]
 AttributeEnd
 
 
