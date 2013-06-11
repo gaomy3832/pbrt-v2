@@ -694,7 +694,10 @@ IntensitySample (float (*Intensity)(float, void *), void *aux) {
         lbdSamples[i] = sampledLambdaStart + i*dSample;
         vSamples[i] = (*Intensity)(lbdSamples[i], aux);
     }
-    return SampledSpectrum::FromSampled (lbdSamples, vSamples, nSpectralSamples);
+    SampledSpectrum ret = SampledSpectrum::FromSampled (lbdSamples, vSamples, nSpectralSamples);
+    delete [] lbdSamples;
+    delete [] vSamples;
+    return ret;
 }
 
 
